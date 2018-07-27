@@ -4,7 +4,6 @@ import sys
 import time
 import base64
 import sqlite3
-import configparser
 
 import tornado.web
 import tornado.httpserver
@@ -23,8 +22,6 @@ setting = dict(
     static_url_prefix = "/static/",
     static_handler_args = dict(default_filename="index.html")  # 当一个目录被请求时，自动地伺服index.html文件
 )
-config = configparser.ConfigParser()
-print("Reading configuration from: {0}".format(config.read("conf" + os.sep + "config.ini")))
 
 db = sqlite3.connect("tornadoUser.db")
 
