@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow"/>
+    <head>
+        <title>欢迎登录</title>
+        <script src="{{ static_url("js/jquery-3.2.1.js") }}"></script>
+        <!-- <script src="../static/js/jquery-3.2.1.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="{{ static_url("css/welcome.css") }}"/>
+    </head>
+    <script type="text/javascript">
+    window.onload =function(){
+        m = document.getElementById("music");
+        m.volume = 0.3;
+    }
+    </script>
+    <body>
+        <div id="container">
+            <div id="top">
+                <p style="text-align:center;">您好，亲爱的 {{ userName }} 用户.</p>
+                <a style="float:right" href="/logout">退出登录</a>
+                <h1><a href="http://www.baidu.com">欢迎登录，开始使用--></a></h1>
+            </div>
+            <div id="main">
+                <div id="middle">
+                    <h2>便捷导航</h2>
+                    <section>
+                        <h3>门户网站</h3>
+                        <a href="http://www.firefoxchina.cn/">火狐中文网</a>
+                        <a href="http://music.163.com/">网易云音乐</a>                        
+                        <a href="http://news.sina.com.cn/">新浪新闻</a>
+                        <a href="http://www.xinhuanet.com/">新华网</a>
+                        <a href="https://www.zhihu.com/">知乎</a>
+                    </section>
+                    <section>
+                        <h3>精英排行榜</h3>
+                        <a href="http://www.baidu.com">Top1</a>
+                    </section>
+                    <section>
+                        <h3>音乐欣赏</h3>
+                        <audio src="{{ static_url("musics/lakemonth.mp3") }}" id="music" controls="controls" preload="auto" controls controlsList="nodownload">
+                        </audio>
+                    </section>
+                </div>
+                <div id="foot">
+                    <p>Copyright &copy; 2017 - 2018</p>
+                </div>
+                <div style="text-align: center">
+                    <section>
+                        <p>扫码</p>
+                        <img src="{{ static_url("images/hapmonkey.png") }}" alt="扫我"/>
+                    </section>
+                </div>
+            </div>            
+        </div>
+    </body>
+</html>

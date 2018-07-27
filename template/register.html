@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>register</title>
+        <script src="../static/js/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{static_url("css/register.css")}}"/>
+    </head>
+    <body>
+        <div id="register">
+            <h1>register</h1>
+            <form method="post">
+                {% module xsrf_form_html() %}
+                <input type="text" required="required" name="userName" placeholder="用户名" autofocus="autofocus"/>
+                <input type="password" required="required" name="passWord" placeholder="长度为6~15为的密码" pattern="^[a-zA-Z]\w{6,15}$"/>
+                <button type="submit" id="reg" class="but">注册</button>
+            </form>
+            <br/>
+            <a href="/help">遇到问题？</a>
+        </div>
+    </body>
+</html> 
