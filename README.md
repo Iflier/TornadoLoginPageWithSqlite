@@ -11,6 +11,12 @@ Tornado version: 5.1</br>
 Sqlite3</br>
 # TODOS
 把该应用打包到`ubuntu`镜像，从容器中运行。</br>
+## UPDATE
+**2017.07.27**
+历经多个业余时间，终于把一个完整的应用打包成一个镜像了 :-)</br>
+镜像内`Tornado WEB Server`默认监听端口为`10000`，启动容器时，可以在外部`host`选择其他端口进行映射</br>
+镜像内安装的Python3版本为 **Python 3.7**，`pip`包管理器为Version 18.0。在容器内的`/home/hap`目录下启动`server.py`脚本时，</br>
+使用的启动命令为 **python3.7 server.py**</br>
 
 # License
 GPL V2.0</br>
