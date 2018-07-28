@@ -44,6 +44,9 @@ form#textMessage{
 	background-color: #CAFF70;
     border-radius: 10px;
 }
+#top h1{
+    color: #EE3A8C;
+}
 #main{
     width: 100%;
     height: auto;
