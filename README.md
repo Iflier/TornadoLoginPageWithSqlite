@@ -10,7 +10,7 @@ Python version: CPython 3.6.5</br>
 Tornado version: 5.1</br>
 Sqlite3</br>
 # TODOS
-把该应用打包到`ubuntu`镜像，从容器中运行。</br>
+~~把该应用打包到`ubuntu`镜像，从容器中运行。~~</br>
 ## UPDATE
 **2017.07.27**</br>
 </br>
