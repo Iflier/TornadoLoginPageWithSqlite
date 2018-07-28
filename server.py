@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import os
+import sys
 
 import tornado.ioloop
 import tornado.options
@@ -15,7 +16,10 @@ def main():
     print("HTTP Server running on {0} port ...".format(options.port))
     print("Stop the server, press Ctrl + C")
     httpServer = tornado.httpserver.HTTPServer(app)
-    httpServer.bind(options.port, reuse_port=True)
+    if sys.platform.startswith("linux"):
+        httpServer.bind(options.port, reuse_port=True)
+    else:
+        httpServer.bind(options.port, reuse_port=False)
     httpServer.start()
     tornado.ioloop.IOLoop.current().start()
 
